@@ -1,23 +1,17 @@
 <div class="jumbtron">
   <mat-card>
     <mat-toolbar color="accent">
-      <div align="center" style="color:white;text-align: right;">
-        <h1 class="display-4 text-center">Employee Register</h1>
+      <div align-text="center" style="color:white;text-align: right;">
+        <h1 class="display-4 text-center">EMPLOYEE</h1>
       </div>
     </mat-toolbar>
+    <br>
+    <mat-card-content>
+      <app-employee></app-employee>
+    </mat-card-content>
   </mat-card>
-  <mat-card-content>
-      <app-employee></app-employee>
-
-      <app-employee-list></app-employee-list>
-  </mat-card-content>
-  <!-- <hr>
-  <div class="row">
-    <div class="col-md-5">
-      <app-employee></app-employee>
-    </div>
-    <div class="col-md-7">
-      <app-employee-list></app-employee-list>
-    </div>
-  </div> -->
+  <br>
+  <h1>LIST OF EMPLOYEE</h1>
+  <br>
+  <app-employee-list></app-employee-list>
 </div>

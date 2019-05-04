@@ -9,19 +9,15 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-
-
-
-  constructor( protected service: EmployeeService,
-    private toastr: ToastrService) { }
-
+  constructor(protected service: EmployeeService, private toastr: ToastrService) { }
   ngOnInit() {
     this.resetForm();
   }
 
   resetForm(form?: NgForm) {
-    if (form != null)
+    if (form != null) {
       form.resetForm();
+    }
     this.service.formData = {
       EmployeeID: null,
       FullName: '',
@@ -30,17 +26,15 @@ export class EmployeeComponent implements OnInit {
       Mobile: ''
     }
   }
-
-
+  // thực hiện khi nhấn button submit
   onSubmit(form: NgForm) {
-    if(form.value.EmployeeID == null)
+    if (form.value.EmployeeID == null) {
       this.insertRecord(form);
-    else
+    } else {
       this.updateRecord(form);
+    }
   }
-  // onSubmit(form: NgForm){
-  //   this.insertRecord(form);
-  // }
+
   insertRecord(form: NgForm) {
     this.service.postEmployee(form.value).subscribe(res => {
       this.toastr.success('Inserted successfully', 'EMP. Register');

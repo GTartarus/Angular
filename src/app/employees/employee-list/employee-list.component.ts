@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/shared/employee.service';
 import { Employee } from 'src/app/shared/employee.model';
 import { ToastrService } from 'ngx-toastr';
-
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
@@ -12,8 +11,7 @@ export class EmployeeListComponent implements OnInit {
   displayedColumns: string[] = ['EmployeeID', 'FullName', 'Position', 'EMPCode', 'Mobile'];
   data: Employee[] = [];
   isLoadingResults = true;
-  constructor(public service: EmployeeService,
-    private toastr: ToastrService) { }
+  constructor(public service: EmployeeService, public toastr: ToastrService) { }
 
   ngOnInit() {
     this.service.refreshList();
@@ -32,5 +30,7 @@ export class EmployeeListComponent implements OnInit {
       });
     }
   }
+  onDetails(id: number){
 
+  }
 }

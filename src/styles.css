@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import '@angular/material/prebuilt-themes/purple-green.css';
+/* toastr css */
+@import '~ngx-toastr/toastr.css';
 .form-group>input{
   font-weight: bolder;
 }
@@ -37,7 +39,7 @@ div.validation-error{
   color: #dc3545;
 }
 body{
-  background-image: url("src/img/1.jpg") ;
+  background-image: url("src/img/2.jpg") ;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
